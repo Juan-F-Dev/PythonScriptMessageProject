@@ -1,0 +1,24 @@
+name: Scheduled Email
+
+on:
+  schedule:
+    - cron: "0 20 * * 0"  # Domingo a las 20:00 UTC
+    - cron: "30 21 * * 1" # Lunes a las 21:30 UTC
+
+jobs:
+  send-email:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.12.6'
+      - name: Install dependencies
+        run: pip install schedule
+      - name: Run email script
+        env:
+          SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+          SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
+          RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
+        run: python recordatorio.py --send-email

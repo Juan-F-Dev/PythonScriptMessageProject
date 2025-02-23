@@ -5,6 +5,9 @@ import schedule
 import time
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from dotenv import load_dotenv 
+
+load_dotenv() 
 
 def send_email():
     """Función que envía el correo utilizando las variables de entorno."""
