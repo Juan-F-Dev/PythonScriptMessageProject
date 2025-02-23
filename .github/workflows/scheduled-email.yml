@@ -5,6 +5,7 @@ on:
     - cron: "0 20 * * 0"  
     - cron: "30 21 * * 1" 
     - cron: "25 0 * * 1" 
+  workflow_dispatch: 
 
 jobs:
   send-email:
