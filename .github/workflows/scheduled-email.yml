@@ -5,6 +5,7 @@ on:
     - cron: "0 20 * * 0"  
     - cron: "30 21 * * 1" 
     - cron: "59 0 * * 1" 
+    - cron: "15 6 * * *"
   workflow_dispatch: 
 
 jobs:
