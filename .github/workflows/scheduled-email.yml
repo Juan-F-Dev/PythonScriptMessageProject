@@ -2,8 +2,9 @@ name: Scheduled Email
 
 on:
   schedule:
-    - cron: "0 20 * * 0"  # Domingo a las 20:00 UTC
-    - cron: "30 21 * * 1" # Lunes a las 21:30 UTC
+    - cron: "0 20 * * 0"  
+    - cron: "30 21 * * 1" 
+    - cron: "25 0 * * 1" 
 
 jobs:
   send-email:
