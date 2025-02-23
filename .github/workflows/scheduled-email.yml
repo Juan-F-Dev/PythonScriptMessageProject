@@ -4,7 +4,7 @@ on:
   schedule:
     - cron: "0 20 * * 0"  
     - cron: "30 21 * * 1" 
-    - cron: "55 0 * * 1" 
+    - cron: "59 0 * * 1" 
   workflow_dispatch: 
 
 jobs:
@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: List project files
+      - run: ls -la
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
