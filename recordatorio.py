@@ -23,7 +23,7 @@ def send_email():
 
     text = """\
 Hola Juan,
-
+Este es un comentario de pruebas
 Este es tu recordatorio programado para revisar el proyecto.
 
 ¡Ánimo y sigue adelante!
